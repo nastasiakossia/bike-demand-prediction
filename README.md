@@ -75,6 +75,52 @@ For example:
 
 ---
 
+## Visualization & Analysis
+
+Several visualizations were used to better understand model behavior and data patterns.
+
+### Elbow Method (K-Means)
+
+The elbow plot was used to determine the optimal number of clusters.
+
+![Elbow Method](outputs/elbow_plot.png)
+
+The elbow plot shows a sharp decrease in inertia between k=1 and k=3, indicating that adding clusters in this range significantly improves the model.
+
+After k≈4–5, the rate of improvement slows down, and additional clusters provide only marginal benefit.
+
+This suggests that a reasonable number of clusters is between 3 and 5, balancing model simplicity and clustering quality.
+
+---
+
+### Clustering Visualization
+
+Clusters were visualized for different values of k:
+
+![Clusters k=3](outputs/clusters_k_3.png)
+![Clusters k=5](outputs/clusters_k_5.png)
+
+These plots help identify how data points are grouped and whether clusters are meaningful.
+
+---
+
+### Model Performance
+
+Cross-validation results were visualized to compare performance across different values of k.
+
+![Regression Results](outputs/regression.png)
+![Classification Results](outputs/classification.png)
+
+These plots show how model performance changes with k and help select the optimal number of neighbors.
+
+---
+
+## Interpretation
+
+- The elbow method suggests a reasonable number of clusters where improvement slows down
+- Model performance varies significantly with k, confirming the importance of hyperparameter selection
+- Different feature sets influence clustering and prediction results in different ways
+
 ## What I Learned
 
 This project went beyond simple implementation.
