@@ -42,7 +42,9 @@ def run_clustering(df, features):
 
 
 def run_classification(data, folds, features):
-    print("\nKNN Classification")
+    print("\nKNN Classification with features:")
+    for f in features:
+        print(f" - {f}")
 
     data = add_demand_category(data)
 
@@ -70,7 +72,9 @@ def run_classification(data, folds, features):
 
 
 def run_regression(data, folds, features):
-    print("\nKNN Regression")
+    print("\nKNN Regression with features:")
+    for f in features:
+        print(f" - {f}")
 
     # Define target for regression
     X = data[features].values
