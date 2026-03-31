@@ -12,7 +12,10 @@ def run_sklearn_classification(data, folds, features):
     Run sklearn KNN classification as a baseline check
     against the custom implementation.
     """
-    print("\nSklearn KNN Classification")
+    print("\nSklearn KNN Classification with features:")
+    for f in features:
+        print(f" - {f}")
+
 
     data = add_demand_category(data.copy())
 
@@ -68,7 +71,9 @@ def run_sklearn_regression(data, folds, features):
     Run sklearn KNN regression as a baseline check
     against the custom implementation.
     """
-    print("\nSklearn KNN Regression")
+    print("\nSklearn KNN Regression with features:")
+    for f in features:
+        print(f" - {f}")
 
     X = data[features].to_numpy()
     y = data["cnt"].to_numpy()
